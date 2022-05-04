@@ -1,4 +1,4 @@
-FROM nginx:mainline-alpine
+FROM nginxinc:latest
 COPY . .
 
 RUN cp -r src/html /usr/share/nginx/html
