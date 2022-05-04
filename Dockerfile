@@ -1,4 +1,5 @@
 FROM nginx:mainline-alpine
+COPY . .
 
 RUN cp -r src/html /usr/share/nginx/html
 
