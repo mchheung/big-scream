@@ -1,3 +1,4 @@
+# We're having to use the unprivileged version because OpenShift runs all containers in non-root mode
 FROM nginxinc/nginx-unprivileged:latest
 COPY src/html /usr/share/nginx/html
 
