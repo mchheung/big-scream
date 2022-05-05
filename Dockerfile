@@ -1,4 +1,5 @@
 FROM nginx:mainline-alpine
+RUN mkdir /var/cache/nginx/client_temp
 RUN chgrp -R 0 /var/cache/nginx/client_temp && chmod -R g=u /var/cache/nginx/client_temp
 COPY src/html /usr/share/nginx/html
 
