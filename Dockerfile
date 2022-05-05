@@ -1,9 +1,11 @@
 FROM nginx:mainline-alpine
 COPY src/html /usr/share/nginx/html
 RUN chgrp -R 0 /var/cache/nginx && chown -R 1001:0 /var/cache/nginx
+RUN chmod 775 /var/cache/nginx
 
 USER 1001
 RUN chgrp -R 0 /var/cache/nginx && chown -R 1001:0 /var/cache/nginx
+RUN chmod 775 /var/cache/nginx
 
 # Not really any point in exposing a port in the Dockerfile. Operator's chosen port will override it.
 # EXPOSE 80/tcp
