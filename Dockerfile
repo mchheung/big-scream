@@ -1,5 +1,6 @@
 FROM nginx:mainline-alpine
 COPY src/html /usr/share/nginx/html
+COPY src/config /etc/nginx
 RUN chgrp -R 0 /var/cache/nginx && chown -R 1001:0 /var/cache/nginx
 RUN chmod 775 /var/cache/nginx
 
