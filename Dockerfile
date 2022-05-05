@@ -1,5 +1,5 @@
 FROM nginx:mainline-alpine
-RUN usermod -u 1001 nginx && chown -R 1001:0 /var/cache/nginx 
+RUN chgrp -R 0 /var/cache/nginx && chown -R 1001:0 /var/cache/nginx 
 COPY src/html /usr/share/nginx/html
 
 USER 1001
